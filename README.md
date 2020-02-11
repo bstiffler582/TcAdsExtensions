@@ -6,7 +6,7 @@ Projects:
   - Global variables and structure definitions for testing
 - C# console application
   - AdsConnection.cs: Wrapper for the TwinCAT.Ads.TcAdsClient object
-  - AdsExtensions.cs: Extension methods for automatic type resolution / marshaling of structures in the PLC.
+  - AdsExtensions.cs: Extension methods (of the ISymbol interface) for automatic type resolution / marshaling of symbol values in the PLC.
   
 See Program.main() for a sample client which demonstrates read/write operations on a structure, as well as event handling with some primitive types.
 
