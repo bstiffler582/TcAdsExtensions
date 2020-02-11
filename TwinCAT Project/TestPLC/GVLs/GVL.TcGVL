@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="GVL" Id="{c98dbca6-30b0-4615-8643-274b076c209e}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	// PLC structure for testing type resolution in ADS client
+	PlcStruct : TestStruct;
+	
+	// Vars for client global event handler
+	iEventData1 : DINT := 1;
+	fEventData2 : REAL := 3.14;
+	
+	// Var for client custom event handler
+	iCustomEvent : DINT := 2;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

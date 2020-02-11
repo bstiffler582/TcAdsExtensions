@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <DUT Name="TestStruct" Id="{945d4d07-6e76-44ab-9627-aa805f40351f}">
+    <Declaration><![CDATA[TYPE TestStruct :
+STRUCT
+	iVal : DINT := 0;
+	fVal : REAL := 0.0;
+	sVal : STRING := '';
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
