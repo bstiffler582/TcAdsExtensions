@@ -1,5 +1,5 @@
 # TcAdsExtensions
-Extension methods for the TwinCAT.Ads namespace for serialization/deserialization of structured types in TwinCAT.
+Extension methods for the TwinCAT.Ads namespace for serialization/deserialization of structured types in TwinCAT PLC.
 
 Projects:
 - Simple TwinCAT PLC project
