@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Reflection;
 using TwinCAT.TypeSystem;
 
@@ -218,12 +217,11 @@ namespace TcAdsExtensions.ADS
             else
             {
                 // iterate through each symbol array element
-                Parallel.For(0, symbol.SubSymbols.Count, (i) => {
-
+                for (int i = 0; i < symbol.SubSymbols.Count; i++)
+                {
                     // call DeserializeObject on each element
                     obj[i] = DeserializeObject<T>(symbol.SubSymbols[i]);
-
-                });
+                }
             }
 
             // return generated array of type T
@@ -261,10 +259,10 @@ namespace TcAdsExtensions.ADS
                     var sub = new KeyValuePair<string, object>[symbol.SubSymbols.Count];
 
                     // loop through struct array and call recursively
-                    Parallel.For(0, symbol.SubSymbols.Count, (i) =>
+                    for (int i = 0; i < symbol.SubSymbols.Count; i++)
                     {
                         sub[i] = new KeyValuePair<string, object>(symbol.SubSymbols[i].InstanceName, symbol.SubSymbols[i].ToDictionary());
-                    });
+                    }
 
                     // add loaded KVPs into dictionary
                     foreach (KeyValuePair<string, object> pair in sub)
@@ -288,6 +286,5 @@ namespace TcAdsExtensions.ADS
 
             return dict;
         }
-
     }
 }
