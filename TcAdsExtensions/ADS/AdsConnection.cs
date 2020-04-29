@@ -33,7 +33,7 @@ namespace TcAdsExtensions.ADS
         }
 
         /// <summary>
-        /// Constructor
+        /// Constructor - establishes connection and creates symbol loader
         /// </summary>
         /// <param name="AmsNetId">ADS Client AMS Net Id "x.x.x.x.x.x:port" (127.0.0.1.1.1:851)</param>
         public AdsConnection(string AmsNetId)
